@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.pratap.jms -DartifactId=jms-parent-pom -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

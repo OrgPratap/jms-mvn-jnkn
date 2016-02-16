@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<!-- the application context definition for the springapp DispatcherServlet -->
+
+	<bean id="productManager" class="org.sps.service.SimpleProductManager">
+		<property name="products">
+			<list>
+				<ref bean="product1"></ref>
+				<ref bean="product2"></ref>
+				<ref bean="product3"></ref>
+			</list>
+		</property>
+		<property name="productDao" ref="jdbcProd"/>
+	</bean>
+	
+	<bean id="product1" class="org.sps.domain.Product">
+		<property name="description" value="Lamp"/>
+		<property name="price" value="5.75"/>
+	</bean>
+	<bean id="product2" class="org.sps.domain.Product">
+		<property name="description" value="Table"/>
+		<property name="price" value="75.25"/>
+	</bean>
+	<bean id="product3" class="org.sps.domain.Product">
+		<property name="description" value="Chair"/>
+		<property name="price" value="22.29"/>
+	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages"/>
+	</bean>
+
+	<bean name="inventoryController" class="org.sps.controller.InventoryController">
+		<property name="productManager" ref="productManager"/>
+	</bean>
+	
+	<bean name="priceIncreaseFormController" class="org.sps.controller.PriceIncreaseFormController">
+		<property name="sessionForm" value="true"/>
+		<property name="commandName" value="priceIncrease"/>
+		<property name="commandClass" value="org.sps.service.PriceIncrease"/>
+		<property name="validator">
+			<bean class="org.sps.service.PriceIncreaseValidator"/>
+		</property>
+		<property name="formView" value="priceincrease"/>
+		<property name="successView" value="hello.htm"/>
+		<property name="productManager" ref="productManager"/>
+	</bean>
+	
+	
+	<bean id="productReceiver" class="org.sps.service.SimpleProductReceiver">
+		<property name="products">
+			<list>
+				<ref bean="product1"></ref>
+				<ref bean="product2"></ref>
+				<ref bean="product3"></ref>
+			</list>
+		</property>
+		<property name="receiverDao" ref="receiverDao"/>
+	</bean>
+	
+	<bean name="productReceiverFormController" class="org.sps.controller.ProductReceiverFormController">
+		<property name="productManager" ref="productManager"/>
+		<property name="productReceiver" ref="productReceiver"/>
+	</bean>
+	
+	
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/hello.htm" >inventoryController</prop>
+				<prop key="/priceincrease.htm" >priceIncreaseFormController</prop>
+				<prop key="/sendproduct.htm" >productReceiverFormController</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+</beans>
