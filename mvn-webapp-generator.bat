@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.pratap.file.upload -DartifactId=file-upload-ui-pom -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
