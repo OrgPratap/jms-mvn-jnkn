@@ -1,0 +1,27 @@
+<pqntn003>
+<MSG>
+<userMsgId>MUM-002-010020</userMsgId>
+<userMsgData>Mumbai East</userMsgData>
+<priority>7</priority>
+</MSG>
+<MSG>
+<userMsgId>TRI-050-674567</userMsgId>
+<userMsgData>Tripura</userMsgData>
+<priority>0</priority>
+</MSG>
+<MSG>
+<userMsgId>BLR-888-124599</userMsgId>
+<userMsgData>Bangalore East</userMsgData>
+<priority>2</priority>
+</MSG>
+<MSG>
+<userMsgId>AAA-545-175632</userMsgId>
+<userMsgData>Pashan East End</userMsgData>
+<priority>3</priority>
+</MSG>
+<MSG>
+<userMsgId>DDR-909-567890</userMsgId>
+<userMsgData>Fiju John Ymx</userMsgData>
+<priority>2</priority>
+</MSG>
+</pqntn003>

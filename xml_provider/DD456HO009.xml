@@ -1,0 +1,27 @@
+<pqntn001>
+<MSG>
+<userMsgId>MUM-002-010020</userMsgId>
+<userMsgData>Mumbai East</userMsgData>
+<priority>7</priority>
+</MSG>
+<MSG>
+<userMsgId>DLH-050-674567</userMsgId>
+<userMsgData>Delhi Central</userMsgData>
+<priority>4</priority>
+</MSG>
+<MSG>
+<userMsgId>BLR-665-009912</userMsgId>
+<userMsgData>Bangalore East</userMsgData>
+<priority>2</priority>
+</MSG>
+<MSG>
+<userMsgId>CHN-880-117654</userMsgId>
+<userMsgData>Chennai East End</userMsgData>
+<priority>3</priority>
+</MSG>
+<MSG>
+<userMsgId>KOL-001-923047</userMsgId>
+<userMsgData>Kolkata Durga Mandir</userMsgData>
+<priority>9</priority>
+</MSG>
+</pqntn001>
