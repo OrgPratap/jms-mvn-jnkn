@@ -4,12 +4,15 @@ import java.util.*;
 
 import javax.mail.*;
 
-public class MailReader {
+import com.pratap.mail.xmlsupport.MailToXmlCreator;
+
+public class XmlContentMailReader {
 	public static void main(String[] args) {
 
 		Properties props = new Properties();
 		props.setProperty("mail.store.protocol", "imaps");
-
+		String l_m_id = null; //listed member id
+		String l_m_info = null;//listed member information
 
 		try {
 			Session session = Session.getInstance(props, null);
@@ -33,14 +36,16 @@ public class MailReader {
 						for (Address address : in) {
 							System.out.println("FROM:" + address.toString());
 						}
-						Multipart mp = (Multipart) msg.getContent();
-						BodyPart bp = mp.getBodyPart(0);
 						System.out.println("SENT DATE:" + msg.getSentDate());
 						System.out.println("SUBJECT:" + msg.getSubject());
+						l_m_id = msg.getSubject();
+						Multipart mp = (Multipart) msg.getContent();
+						BodyPart bp = mp.getBodyPart(0);
 						System.out.println("CONTENT:" + bp.getContent());
+						l_m_info = (String) bp.getContent();
+						new Thread(new MailToXmlCreator(l_m_id,l_m_info)).start();
 						msg.setFlag(Flags.Flag.DELETED, true);
 						System.err.println("Marked DELETE for message: " + msg.getSubject());
-						//msg.isSet(Flag.FLAGGED.DELETED);
 						System.out.println("++++++++++++{ next mail read after 10 second...]++++++++++++++++");
 						Thread.currentThread().sleep(10000);
 					}

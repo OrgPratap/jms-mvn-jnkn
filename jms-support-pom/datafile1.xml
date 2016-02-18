@@ -1,0 +1,52 @@
+<pqntn>
+	<MSG>
+		<userMsgId>MUM-002-010020</userMsgId>
+		<userMsgData>Mumbai East</userMsgData>
+		<priority>7</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>DLH-050-674567</userMsgId>
+		<userMsgData>Delhi Central</userMsgData>
+		<priority>4</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>BLR-665-009912</userMsgId>
+		<userMsgData>Bangalore East</userMsgData>
+		<priority>2</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>CHN-880-117654</userMsgId>
+		<userMsgData>Chennai East End</userMsgData>
+		<priority>3</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>KOL-001-923047</userMsgId>
+		<userMsgData>Kolkata Durga Mandir</userMsgData>
+		<priority>9</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>RJS-000-786755</userMsgId>
+		<userMsgData>UdaiPur Urban</userMsgData>
+		<priority>9</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>NGP-334-007645</userMsgId>
+		<userMsgData>Nagpur Outer</userMsgData>
+		<priority>5</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>KRL-999-112211</userMsgId>
+		<userMsgData>Kerala Coast</userMsgData>
+		<priority>1</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>LKO-555-990001</userMsgId>
+		<userMsgData>Vipin Khand</userMsgData>
+		<priority>6</priority>
+	</MSG>
+	<MSG>
+		<userMsgId>BHR-668-441230</userMsgId>
+		<userMsgData>Modern Patna</userMsgData>
+		<priority>7</priority>
+	</MSG>
+</pqntn>
