@@ -7,9 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body bgcolor="Blue">
+<body bgcolor="green">
 <center>
+<jsp:include page="/WEB-INF/jsp/header.html"></jsp:include>
+<hr color="WHITE">
 <h4>Hi Satendra</h4>
+<hr color="WHITE">
+<jsp:include page="/WEB-INF/jsp/footer.html"></jsp:include>
 </center>
 </body>
 </html>
