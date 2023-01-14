@@ -14,7 +14,7 @@ public class MailReader {
 		try {
 			Session session = Session.getInstance(props, null);
 			Store store = session.getStore();
-			store.connect("imap.gmail.com", "jmsmvntestmail@gmail.com", "satendra78990");
+			store.connect("imap.gmail.com", "jmsmvntestmail@gmail.com", "jmsmvntestmail@123");
 			Folder inbox = store.getFolder("INBOX");
 			//inbox.open(Folder.READ_WRITE);
 			Message messages[];
